@@ -1,0 +1,35 @@
+.green {
+  color: green;
+  font-size: 30px;
+}
+
+.red {
+  color: red;
+  font-size: 30px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+input.text-center {
+  padding: 10px;
+  font-size: 30px;
+  height: 50px;
+}
+
+button.btn {
+  padding: 10px;
+  width: 100px;
+  height: 70px;
+}
+
+button.btn.btn-inc {
+  background-color: red;
+  font-size: 32px;
+}
+
+button.btn.btn-dec {
+  background-color: green;
+  font-size: 32px;
+}
