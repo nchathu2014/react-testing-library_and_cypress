@@ -22,14 +22,15 @@ button.btn {
   padding: 10px;
   width: 100px;
   height: 70px;
-}
-
-button.btn.btn-inc {
-  background-color: red;
   font-size: 32px;
 }
 
-button.btn.btn-dec {
+.btn-inc {
   background-color: green;
+  font-size: 32px;
+}
+
+.btn-dec {
+  background-color: red;
   font-size: 32px;
 }

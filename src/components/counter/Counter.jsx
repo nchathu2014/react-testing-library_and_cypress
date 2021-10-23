@@ -9,6 +9,16 @@ export default function Counter() {
     setCounterValue(counterValue + inputBoxValue);
   };
 
+  const getCounterLabelStyle = (counterValue, type) => {
+    let style = "btn";
+    if (type === "INC" && counterValue >= 100) {
+      style += " btn-inc";
+    } else if (type === "DEC" && counterValue <= -100) {
+      style += " btn-dec";
+    }
+    return style;
+  };
+
   return (
     <div>
       <h1 data-testid="header">My Counter</h1>
@@ -22,7 +32,7 @@ export default function Counter() {
       </h3>
 
       <button
-        className="btn btn-inc"
+        className={`${getCounterLabelStyle(counterValue, "DEC")}`}
         data-testid="btn-decrement"
         onClick={() => setCounterValue(counterValue - inputBoxValue)}
       >
@@ -36,7 +46,7 @@ export default function Counter() {
         onChange={(event) => setInputBoxValue(parseInt(event.target.value))}
       />
       <button
-        className="btn btn-dec"
+        className={`${getCounterLabelStyle(counterValue, "INC")}`}
         data-testid="btn-increment"
         onClick={handleIncrement}
       >
